@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="560" height="76" viewBox="0 0 560 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PPI curve" clip-path="url(#clip0_0_7)">
+<line id="Grid 1" x1="109.5" y1="58" x2="109.5" y2="3" stroke="white" stroke-opacity="0.1"/>
+<line id="Grid 2" x1="227.5" y1="58" x2="227.5" y2="3" stroke="white" stroke-opacity="0.1"/>
+<line id="Grid 3" x1="343.5" y1="58" x2="343.5" y2="3" stroke="white" stroke-opacity="0.1"/>
+<line id="Grid 4" x1="463.5" y1="58" x2="463.5" y2="3" stroke="white" stroke-opacity="0.1"/>
+<path id="Vector 1" d="M0.5 24.5C87.5 24.6667 277.7 23.4 342.5 17C407.3 10.6 512.5 9 557 9" stroke="#A3D9F6" stroke-width="2"/>
+<path id="Vector 2" d="M2.5 31.5C69.3333 31.6667 208.7 32.5 231.5 34.5C260 37 362 27.5 555.5 27.5" stroke="#F1A080" stroke-width="2"/>
+<path id="Vector 3" d="M2.5 46C40.3333 48 134.5 45.8 210.5 41C305.5 35 504 49.5 556 45.5" stroke="#F0E787" stroke-width="2"/>
+<path id="Grid 0" d="M-7 59L-7 3" stroke="white" stroke-opacity="0.1"/>
+<line id="Grid H 1" x1="-7" y1="30.5" x2="549" y2="30.5" stroke="white" stroke-opacity="0.1"/>
+<line id="Grid H 0" x1="-7" y1="2.5" x2="549" y2="2.5" stroke="white" stroke-opacity="0.1"/>
+<line id="Grid H 2" x1="-7" y1="58.5" x2="549" y2="58.5" stroke="white" stroke-opacity="0.1"/>
+</g>
+<defs>
+<clipPath id="clip0_0_7">
+<rect width="560" height="76" fill="white"/>
+</clipPath>
+</defs>
+</svg>

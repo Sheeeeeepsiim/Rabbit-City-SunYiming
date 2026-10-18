@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1a2b1f" />
+    <title>Rewilding Rhythm Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="viewport" aria-label="Rewilding monitoring dashboard">
+      <section id="dashboard" class="stage" data-view="home">
+        <img class="ambient ambient-lime" src="assets/glow-lime.svg" alt="" />
+        <img class="ambient ambient-blue" src="assets/glow-blue.svg" alt="" />
+        <img class="ambient ambient-amber" src="assets/glow-amber.svg" alt="" />
+
+        <div class="shell glass-border">
+          <header class="topbar">
+            <div class="brand-mark" aria-label="Rewilding Rhythm">
+              <span></span><span></span><span></span>
+            </div>
+            <label class="search">
+              <img src="assets/search-icon.svg" alt="" />
+              <input id="dashboard-search" type="search" placeholder="Search patch / sensor / action" />
+            </label>
+            <div class="cycle-pill">cycle 2</div>
+          </header>
+
+          <button class="map-card glass-card interactive" data-action="map" type="button" aria-label="Open patch status">
+            <div class="map-image-wrap">
+              <img class="map-image" src="assets/terrain-map.png" alt="Aerial terrain map of Craigmillar Castle Park" />
+              <div class="map-label">Craigmillar Castle Park</div>
+            </div>
+            <div class="map-footer">
+              <div>
+                <strong>Patch A: concentrated feeding pressure</strong>
+                <span>RAI 78 high + VCI 42 below range</span>
+              </div>
+              <span class="lime-cta">Review action</span>
+            </div>
+          </button>
+
+          <section class="rhythm-card glass-card" aria-labelledby="rhythm-title">
+            <h1 id="rhythm-title">Rabbit–Vegetation–Predator Rhythm</h1>
+            <p>Cycle 2: RAI above range, VCI below range, PPI rising but still under watch</p>
+            <img class="rhythm-chart" src="assets/rhythm-chart.svg" alt="Trend chart for RAI, VCI and PPI" />
+            <div class="legend" aria-hidden="true">
+              <span><i class="dot rai"></i>RAI</span>
+              <span><i class="dot vci"></i>VCI</span>
+              <span><i class="dot ppi"></i>PPI</span>
+            </div>
+          </section>
+
+          <div class="metric-row">
+            <button class="metric-card glass-card interactive metric-rai" data-action="rai" type="button">
+              <b>RAI</b><small>Rabbit Activity</small>
+              <div class="metric-state"><strong>Above Range</strong><span>+18%</span></div>
+              <div class="meter"><i style="width:86%"></i></div>
+            </button>
+            <button class="metric-card glass-card interactive metric-ppi" data-action="ppi" type="button">
+              <b>PPI</b><small>Predator Pressure</small>
+              <div class="metric-state"><strong>Rising</strong><span>+9%</span></div>
+              <div class="meter"><i style="width:67%"></i></div>
+            </button>
+            <button class="metric-card glass-card interactive metric-vci" data-action="vci" type="button">
+              <b>VCI</b><small>Vegetation Condition</small>
+              <div class="metric-state"><strong>Below Range</strong><span>-12%</span></div>
+              <div class="meter"><i style="width:46%"></i></div>
+            </button>
+          </div>
+
+          <section class="rhythm-check glass-card" aria-label="Rhythm check">
+            <strong>Rhythm<br />Check</strong>
+            <div class="check-pill"><span>Range</span><b>near edge</b></div>
+            <div class="check-pill"><span>State</span><b>Warning</b></div>
+            <div class="check-pill"><span>Persist</span><b class="lime-text">2 cycles</b></div>
+            <div class="check-pill"><span>Trend</span><b>Adverse</b></div>
+          </section>
+
+          <section class="sensor-strip glass-card" aria-labelledby="sensor-title">
+            <h2 id="sensor-title">Sensor System</h2>
+            <div class="sensor-buttons">
+              <button data-action="infrared" type="button"><i class="status active"></i><span>Infrared Camera<small>Active</small></span></button>
+              <button data-action="thermal" type="button"><i class="status active"></i><span>Thermal Camera<small>Active</small></span></button>
+              <button data-action="vegetation" type="button"><i class="status alert"></i><span>Vegetation Plot<small>Alert</small></span></button>
+              <button data-action="environment" type="button"><i class="status active"></i><span>Environment Sensor<small>Active</small></span></button>
+            </div>
+          </section>
+
+          <button class="response-card glass-card interactive" data-action="recommendedAction" type="button">
+            <span class="eyebrow">PREPARED RESPONSE</span>
+            <strong>Patch B<br />Prepared</strong>
+            <p>Open the alternative feeding patch and reduce pressure on Patch A for the next 2 cycles.</p>
+            <div class="response-trigger"><span>Triggered by</span><b>RAI high + VCI low</b></div>
+          </button>
+
+          <button class="state-card glass-card interactive" data-action="currentState" type="button">
+            <span class="eyebrow">CURRENT STATE</span>
+            <strong>Warning</strong>
+            <p>Patch A shows concentrated rabbit activity, while vegetation remains below the threshold over both cycles.</p>
+            <div class="state-meter"><i></i></div>
+            <small>monitoring increased</small>
+          </button>
+        </div>
+
+        <div id="modal-layer" class="modal-layer" hidden>
+          <div class="scrim" data-action="close"></div>
+          <section id="modal" class="modal" role="dialog" aria-modal="true" aria-live="polite"></section>
+        </div>
+      </section>
+    </main>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
